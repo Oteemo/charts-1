@@ -2,6 +2,10 @@
 nameOverride: ""
 fullnameOverride: ""
 
+# Override the deployment namespace
+# global:
+#   namespaceOverride: ""
+
 replicas: 3
 port: 27017
 
@@ -13,6 +17,9 @@ replicaSetName: rs0
 podDisruptionBudget: {}
   # maxUnavailable: 1
   # minAvailable: 2
+
+# updateStrategy:
+  # type: RollingUpdate
 
 auth:
   enabled: false
